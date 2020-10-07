@@ -46,6 +46,9 @@ export class AddEditComponent implements OnInit {
             this.accountService.getById(this.id)
                 .pipe(first())
                 .subscribe(x => this.form.patchValue(x));
+            this.accountService.getById(this.id)
+            .pipe(first())
+            .subscribe(x => console.log(x));
         }
     }
 //Make date required if temporarily banned
@@ -90,6 +93,7 @@ export class AddEditComponent implements OnInit {
     }
 
     private createAccount() {
+      console.log(this.form.value);
         this.accountService.create(this.form.value)
             .pipe(first())
             .subscribe({

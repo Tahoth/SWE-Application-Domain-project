@@ -39,6 +39,7 @@ export class AccountService {
                 }
                 if (account.disabled==="Temporarily")
                 {
+                console.log(account);
                 if(new Date(account.startDisable) < new Date() && new Date(account.endDisable) > new Date())
                 {
                 this.logout();

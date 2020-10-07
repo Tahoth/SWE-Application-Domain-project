@@ -32,11 +32,10 @@
     </div>
     <div class="form-row">
         <div class="form-group col-7">
-            <label>Email</label>
+            <label>Username</label>
             <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
             <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                <div *ngIf="f.email.errors.required">Email is required</div>
-                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                <div *ngIf="f.email.errors.required">Username is required</div>
             </div>
         </div>
         <div class="form-group col">
@@ -68,6 +67,7 @@
         <div *ngIf="f.title.disabled.required">Status required</div>
       </div>
     </div>
+
     <div class="form-group col-5">
       <label>Start Date</label>
       <input type="date" formControlName="startDisable" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.startDisable.errors }" />
@@ -82,6 +82,7 @@
         <div *ngIf="f.lastName.endDisable.required">Required</div>
       </div>
     </div>
+
   </div>
 
 
